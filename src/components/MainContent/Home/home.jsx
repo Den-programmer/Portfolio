@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './home.module.scss'
+import LinkBtn from '../../common/LinkBtn/linkBtn'
 
 const Home = () => {
 
@@ -20,14 +21,12 @@ const Home = () => {
                         </p>
                     </div>
                     <div className={classes.navigationPanel}>
-                        <button className={classes.navPanel__btn}>
-                            <span style={{ zIndex: '100' }}>My Portfolio</span>
-                            <span className={classes.hoverBackground}></span>
-                        </button>
-                        <button className={classes.navPanel__btn}>
-                            <span style={{ zIndex: '100' }}>Get in touch</span>
-                            <span></span>
-                        </button>
+                        <LinkBtn isFirst={true}>
+                            Get in touch
+                        </LinkBtn>
+                        <LinkBtn>
+                            My Portfolio
+                        </LinkBtn>
                     </div>
                 </div>
                 <div className={classes.animation}>

@@ -10,6 +10,14 @@ const App = (props) => {
   return (
     <div className="App">
       <Switch>
+        <Route path='/Portfolio' render={() => <div className="dFlexContainer">
+          <Sidebar />
+          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+            <Header />
+            <MainPage />
+            <Footer />
+          </div>
+        </div>} />
         <Route path='/' render={() => <div className="dFlexContainer">
           <Sidebar />
           <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
