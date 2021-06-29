@@ -1,25 +1,31 @@
-@import '../../index.scss';
+@import "../../index.scss";
+
+.mainTitle {
+    font-size: 36px;
+    font-family: $Raleway;
+}
+.subMainText {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: $Lato;
+}
 
 .footer {
-    background: linear-gradient(to right, #23325B, #1C2849);
+    background: linear-gradient(to right, #23325b, #1c2849);
     width: 100%;
     height: 300px;
-    color: #FFF;
+    color: #fff;
     display: flex;
     align-items: center;
     .footerInfContainer {
-        width: 95%;
-        margin: 0 auto;
+        @extend .container;
         .textWrapper {
             width: 400px;
-            h1 {
-                font-size: 36px;
-                font-family: $Raleway;
+            h2 {
+                @extend .mainTitle;
             }
             p {
-                font-size: 14px;
-                font-weight: 300;
-                font-family: $Lato;
+                @extend .subMainText;
             }
         }
         .navigationPanel {

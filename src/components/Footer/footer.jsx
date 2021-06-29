@@ -7,7 +7,7 @@ const Footer = () => {
         <div className={classes.footer}>
             <div className={classes.footerInfContainer}>
                 <div className={classes.textWrapper}>
-                    <h1>Let's get in touch</h1>
+                    <h2>Let's get in touch</h2>
                     <p>
                         Do you have an interesting project I can help with?
                         Feel free to reach out to me!
