@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './sidebar.module.scss'
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarWidth }) => {
     return (
-        <div className={classes.sidebar}>
-
+        <div style={{ width: sidebarWidth + 'px' }} className={classes.sidebar}>
+            
         </div>
     )
 }

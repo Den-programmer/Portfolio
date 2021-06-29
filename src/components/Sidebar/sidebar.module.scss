@@ -1,0 +1,11 @@
+.sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 998;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    background: rgb(32, 46, 84);
+    transition: transform 0.25s ease-in-out 0s, box-shadow 0.25s 0s;
+}

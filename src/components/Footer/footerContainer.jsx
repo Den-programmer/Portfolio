@@ -1,4 +1,4 @@
-import { connect  } from 'rreact-redux'
+import { connect  } from 'react-redux'
 import Footer from './footer'
 
 const mapStateToProps = (state) => ({
