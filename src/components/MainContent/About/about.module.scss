@@ -1,0 +1,27 @@
+@import '../../../index.scss';
+
+.about {
+    h2, h3 {
+        color: #FFF;
+        font-family: $Raleway;
+    }
+    h3 {
+        
+    }
+    .AboutContainer {
+        @extend .container;
+        .realInformation {
+            background: #202E54;
+            padding: 35px;
+            margin: 45px;
+            .inf {
+
+            }
+            .photo {
+                img {
+
+                }
+            }
+        }
+    }
+}
