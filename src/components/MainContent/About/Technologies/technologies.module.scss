@@ -1,0 +1,27 @@
+@import '../../../../index.scss';
+
+.technologiesContainer {
+    @extend .container;
+    .technologies {
+        margin: 45px;
+        padding: 25px;
+        .resources {
+            display: flex;
+            align-items: center;
+            .source {
+                display: flex;
+                align-items: center;
+                .sourceImage {
+                    width: 24px;
+                    height: 24px;
+                }
+                .sourceTitle {
+                    font-family: $Lato;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    margin:0 10px;
+                }
+            }
+        }
+    }
+}
