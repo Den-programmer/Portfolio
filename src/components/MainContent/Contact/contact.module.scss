@@ -1,0 +1,91 @@
+@import "../../../index.scss";
+
+.contactContainer {
+    height: 100vh;
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h4 {
+    font-family: $Raleway;
+    font-size: 1.6em;
+}
+
+.inf {
+    width: 510px;
+    p {
+        color: #BCBFC7;
+        font-family: $Lato;
+    }
+}
+
+.inf__title {
+    font-size: 2.4em;
+    line-height: 1.6;
+    font-family: $Lato;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactForm {
+    width: 510px;
+}
+
+.list {
+    color: #BCBFC7;
+}
+
+.listItemMarked {
+    color: #E2786C;
+}
+
+.textfield-title {
+    font-size: 0.875em;
+    font-family: $Raleway;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: bold;
+}
+
+.textfieldBlock {
+    margin: 10px 0px;
+    .textfield_title {
+        @extend .textfield-title;
+    }
+    .textfield {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #555e77;
+        background: #1c2849;
+        -webkit-text-fill-color: #b3b7c2;
+        caret-color: #b3b7c2;
+        outline: none;
+    }
+}
+
+.textareaBlock {
+    .textfield_title {
+        @extend .textfield-title;
+    }
+    .textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #555e77;
+        background: #1c2849;
+        -webkit-text-fill-color: #b3b7c2;
+        caret-color: #b3b7c2;
+        resize: vertical;
+        height: 90px;
+        outline: none;
+    }
+}

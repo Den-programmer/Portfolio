@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import Home from './components/MainContent/Home/home'
 import About from './components/MainContent/About/about'
 import ErrorPage from './components/common/ErrorPage/errorPage'
+import Contact from './components/MainContent/Contact/contact'
 
 const App = (props) => {
   return (
@@ -30,6 +31,14 @@ const App = (props) => {
               <About />
             </MainPage>
             <Footer />
+          </div>
+        </div>} />
+        <Route path='/Contact' render={() => <div className="dFlexContainer">
+          <Sidebar />
+          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+            <MainPage>
+              <Contact />
+            </MainPage>
           </div>
         </div>} />
         <Route path='/' render={() => <div className="dFlexContainer">
