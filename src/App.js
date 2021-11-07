@@ -16,7 +16,7 @@ const App = (props) => {
       <Switch>
         <Route path='/Portfolio' render={() => <div className="dFlexContainer">
           <Sidebar />
-          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
             <Header />
             <MainPage>
               <Home />
@@ -26,7 +26,7 @@ const App = (props) => {
         </div>} />
         <Route path='/About' render={() => <div className="dFlexContainer">
           <Sidebar />
-          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
             <MainPage>
               <About />
             </MainPage>
@@ -35,7 +35,7 @@ const App = (props) => {
         </div>} />
         <Route path='/Contact' render={() => <div className="dFlexContainer">
           <Sidebar />
-          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
             <MainPage>
               <Contact />
             </MainPage>
@@ -43,7 +43,7 @@ const App = (props) => {
         </div>} />
         <Route path='/' render={() => <div className="dFlexContainer">
           <Sidebar />
-          <div style={{ marginLeft: props.sidebarWidth + 'px' }} className="Main">
+          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
             <MainPage>
               <Home />
             </MainPage>
@@ -56,7 +56,8 @@ const App = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-  sidebarWidth: state.sidebar.sidebarWidth
+  sidebarWidth: state.sidebar.sidebarWidth,
+  isSidebarOpen: state.sidebar.isSidebarOpen
 })
 
 const AppContainer = connect(mapStateToProps, {})(App)

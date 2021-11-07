@@ -3,6 +3,7 @@
 .contactContainer {
     height: 100vh;
     @extend .container;
+    margin:0 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +32,7 @@ h4 {
 
 .contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .contactForm {
@@ -63,7 +64,7 @@ h4 {
         @extend .textfield-title;
     }
     .textfield {
-        width: 100%;
+        width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
         background: #1c2849;
@@ -78,7 +79,7 @@ h4 {
         @extend .textfield-title;
     }
     .textarea {
-        width: 100%;
+        width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
         background: #1c2849;
