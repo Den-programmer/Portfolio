@@ -5,12 +5,15 @@
     .technologies {
         margin: 45px;
         padding: 25px;
+        margin-bottom: 145px;
         .resources {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             .source {
                 display: flex;
                 align-items: center;
+                margin: 10px 5px;
                 .sourceImage {
                     width: 24px;
                     height: 24px;

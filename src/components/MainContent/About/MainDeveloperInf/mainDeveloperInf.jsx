@@ -7,7 +7,7 @@ const MainDeveloperInf = (props) => {
         <div className={classes.AboutContainer}>
             <div className={classes.realInformation}>
                 <div className={classes.inf}>
-                    <h2 className={classes.infTitle}>About Denis Grygorov</h2>
+                    <h2 className={classes.infTitle}>About Denis Grigorov</h2>
                     <p className={classes.infText}>
                         I've been learned a lot of techonologies since my 13 years,
                         In my fifteen years old started to create My Social Network using React.
