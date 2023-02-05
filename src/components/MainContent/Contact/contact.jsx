@@ -1,6 +1,7 @@
 import React from 'react'
-import LinkBtn from '../../common/LinkBtn/linkBtn'
 import classes from './contact.module.scss'
+import s from '../../common/LinkBtn/linkBtn.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const Contact = (props) => {
     return (
@@ -36,7 +37,10 @@ const Contact = (props) => {
                         <p className={classes.textfield_title}>Message</p>
                         <textarea className={classes.textarea} placeholder="Enter your message..." type="text" />
                     </div>
-                    <LinkBtn>Send message</LinkBtn>
+                    <NavLink to='/Home'
+                        className={s.navPanel__btn}>
+                        <span style={{ zIndex: '100' }}>Send message</span>
+                    </NavLink>
                 </div>
             </div>
         </div>

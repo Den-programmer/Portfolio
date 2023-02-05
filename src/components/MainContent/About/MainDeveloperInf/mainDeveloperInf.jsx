@@ -13,7 +13,7 @@ const MainDeveloperInf = (props) => {
                         In my fifteen years old started to create My Social Network using React.
 
                         Really ambitious and powerful person, beside learning programming, interested in every kinds of science.
-                        The most active in: learning launguages (English, Czech, German), Math, Politics, History, Geopolitics, ... The culture of
+                        The most active in: learning launguages (English, Czech, Dansk), Math, Politics, History, Geopolitics, ... The culture of
                         European countries. Really like travelling.
 
                         Nowadays working on projects: My Social Network, Internet Store, My Social Network API. Gradually learn C#, and do some

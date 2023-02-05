@@ -1,0 +1,27 @@
+@import '../../../index.scss';
+
+.portfolio {
+    @extend .container;
+    .nav {
+        .navList {
+            list-style: none;
+            .navItem {
+                display: inline-block;
+                padding: 8px 16px;
+                border: none;
+                color: #FFF;
+                background: #1F2D53;
+                cursor: pointer;
+                transition: background 0.25s ease 0s;
+                &:hover {
+                    background: #24345F;
+                }
+            }
+        }
+    }
+    .portfolioMainContent {
+        @extend .container;
+        display: flex;
+        justify-content: space-between;
+    }
+}

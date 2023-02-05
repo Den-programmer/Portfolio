@@ -9,7 +9,6 @@
     background: linear-gradient(to right, #23325b, #1c2849);
     .headerInfContainer {
         @extend .container;
-        margin: 40px;
         h2 {
             @extend .mainTitle;
             line-height: 1.2;

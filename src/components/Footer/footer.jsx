@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './footer.module.scss'
-import LinkBtn from '../common/LinkBtn/linkBtn'
+import s from '../common/LinkBtn/linkBtn.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -14,12 +15,15 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className={classes.navigationPanel}>
-                    <LinkBtn isFirst={true}>
-                        Get in touch
-                    </LinkBtn>
-                    <LinkBtn>
-                        About me
-                    </LinkBtn>
+                    <NavLink to='/Contact'
+                        style={ { marginRight: '17px' } }
+                        className={s.navPanel__btn}>
+                        <span style={{ zIndex: '100' }}>Get in touch</span>
+                    </NavLink>
+                    <NavLink to='/About'
+                        className={s.navPanel__btn}>
+                        <span style={{ zIndex: '100' }}>About me</span>
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './home.module.scss'
-import LinkBtn from '../../common/LinkBtn/linkBtn'
+import s from '../../common/LinkBtn/linkBtn.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
-
     return (
         <div className={classes.home}>
             <div className={classes.container}>
@@ -12,7 +12,7 @@ const Home = () => {
                     <h1 className={classes.inf}>
                         my name is Denis Grigorov. <br />
                         I am Full Stack Web Developer based in
-                        Svenborg, Denmark
+                        Svendborg, Denmark
                     </h1>
                     <div className={classes.about}>
                         <p>
@@ -21,12 +21,15 @@ const Home = () => {
                         </p>
                     </div>
                     <div className={classes.navigationPanel}>
-                        <LinkBtn isFirst={true}>
-                            Get in touch
-                        </LinkBtn>
-                        <LinkBtn>
-                            My Portfolio
-                        </LinkBtn>
+                        <NavLink to='/Contact'
+                        style={ { marginRight: '17px' } }
+                            className={s.navPanel__btn}>
+                            <span style={{ zIndex: '100' }}>Get in touch</span>
+                        </NavLink>
+                        <NavLink to='/Portfolio'
+                            className={s.navPanel__btn}>
+                            <span style={{ zIndex: '100' }}>My Portfolio</span>
+                        </NavLink>
                     </div>
                 </div>
                 <div className={classes.animation}>

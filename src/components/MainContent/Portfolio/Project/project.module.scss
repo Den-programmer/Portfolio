@@ -1,0 +1,19 @@
+.project {
+    width: 350px;
+    line-height: 0.8em;
+    text-decoration: none;
+    color: #FFF;
+    cursor: pointer;
+    .projectImage {
+        width: 350px;
+        height: 200px;
+    }
+    .projectContent {
+        background: #223058;
+        padding: 20px;
+        .title {
+            margin-block-start: 0.5em;
+            margin-block-end: 0em;
+        }
+    }
+}

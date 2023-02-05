@@ -9,17 +9,29 @@ import Home from './components/MainContent/Home/home'
 import About from './components/MainContent/About/about'
 import ErrorPage from './components/common/ErrorPage/errorPage'
 import Contact from './components/MainContent/Contact/contact'
+import Portfolio from './components/MainContent/Portfolio/portfolioContainer'
+import ProjectPage from './components/MainContent/ProjectPage/projectPageContainer'
 
 const App = (props) => {
   return (
     <div className="App">
       <Switch>
+        <Route path={'/Portfolio/project/' + props.currentProjectId} render={() => <div className="dFlexContainer">
+          <Sidebar />
+          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
+            <Header />
+            <MainPage>
+              <ProjectPage />
+            </MainPage>
+            <Footer />
+          </div>
+        </div>} />
         <Route path='/Portfolio' render={() => <div className="dFlexContainer">
           <Sidebar />
           <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
             <Header />
             <MainPage>
-              <Home />
+              <Portfolio />
             </MainPage>
             <Footer />
           </div>
@@ -57,7 +69,8 @@ const App = (props) => {
 
 const mapStateToProps = (state) => ({
   sidebarWidth: state.sidebar.sidebarWidth,
-  isSidebarOpen: state.sidebar.isSidebarOpen
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+  currentProjectId: state.portfolio.currentProjectId
 })
 
 const AppContainer = connect(mapStateToProps, {})(App)
