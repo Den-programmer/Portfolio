@@ -1,0 +1,123 @@
+@import '../../../index.scss';
+
+$sidebar_component_bg: #212F57;
+$sidebar_component_padding: 16px;
+
+.project_btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #e6dcdc;
+    font-size: 75px;
+    cursor: pointer;
+    height: 98%;
+    width: 10%;
+}
+
+.projectPage {
+    @extend .container;
+    .mainContent {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding: 80px 0px;
+        .project {
+            width: 60%;
+            .projectDisplay {
+                position: relative;
+                .project_btn_prev {
+                    position: absolute;
+                    @extend .project_btn;
+                }
+                .project_btn_next {
+                    right: 0px;
+                    position: absolute;
+                    @extend .project_btn;
+                }
+                .project_image {
+                    width: 100%;
+                }
+            }
+            .dots {
+                display: flex;
+                justify-content: center;
+                .dot {
+                    width: 13px;
+                    height: 13px;
+                    margin: 0px 7px;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    background: #24345F;
+                    cursor: pointer;
+                }
+                .activeDot {
+                    width: 13px;
+                    height: 13px;
+                    margin: 0px 7px;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    background: #E2786C;
+                    scale: 1.4;
+                }
+            }
+        }
+        .sidebar {
+            width: 35%;
+            .sidebar_title {
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                font-family: $Raleway;
+            }
+            p {
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                font-weight: 300;
+            }
+            div {
+                margin: 10px 0px;
+            }
+            h4 {
+                font-size: 23.5px;
+            }
+            .technologies {
+                background: $sidebar_component_bg;
+                padding: $sidebar_component_padding;
+                margin-top: 0px;
+                .technologies_content {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .technology {
+                    background: #1A2646;
+                    padding: 5px;
+                    font-size: 14px;
+                    width: fit-content;
+                    font-weight: 300;
+                    margin-right: 5px;
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                }
+            }
+            .date {
+                background: $sidebar_component_bg;
+                padding: $sidebar_component_padding;
+                p {
+                    color: #e6dcdc;
+                }
+            }
+            .online {
+                background: $sidebar_component_bg;
+                padding: $sidebar_component_padding;
+                a {
+                    text-decoration: none;
+                    color: #B96866;
+                    font-weight: 300;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
