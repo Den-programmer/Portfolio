@@ -52,7 +52,8 @@ const ProjectPage = (props) => {
                 </div>
             </div>
             <div className={classes.specification}>
-                {project.specification}
+                <h4 className={classes.inf_title}>Technical specification</h4>
+                <p>{project.specification}</p>
             </div>
         </div>
     )

@@ -12,6 +12,11 @@ $sidebar_component_padding: 16px;
     cursor: pointer;
     height: 98%;
     width: 10%;
+    user-select: none;
+    &:hover {
+        color: #FFF;
+        transition: all 0.7s ease;
+    }
 }
 
 .projectPage {
@@ -20,7 +25,8 @@ $sidebar_component_padding: 16px;
         display: flex;
         align-items: start;
         justify-content: space-between;
-        padding: 80px 0px;
+        padding-top: 80px;
+        padding-bottom: 20px;
         .project {
             width: 60%;
             .projectDisplay {
@@ -28,11 +34,17 @@ $sidebar_component_padding: 16px;
                 .project_btn_prev {
                     position: absolute;
                     @extend .project_btn;
+                    &:hover {
+                        box-shadow:inset 40px 0px 40px 0px #222;
+                    }
                 }
                 .project_btn_next {
                     right: 0px;
                     position: absolute;
                     @extend .project_btn;
+                    &:hover {
+                        box-shadow:inset -40px 0px 40px 0px #222;
+                    }
                 }
                 .project_image {
                     width: 100%;
@@ -118,6 +130,18 @@ $sidebar_component_padding: 16px;
                     }
                 }
             }
+        }
+    }
+    .specification {
+        width: 60%;
+        .inf_title {
+            font-family: $Raleway;
+            font-size: 45px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+        p {
+            color: #b4b6ba;
         }
     }
 }
