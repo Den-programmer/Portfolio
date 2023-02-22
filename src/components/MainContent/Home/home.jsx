@@ -32,9 +32,6 @@ const Home = () => {
                         </NavLink>
                     </div>
                 </div>
-                <div className={classes.animation}>
-
-                </div>
             </div>
         </div>
     )

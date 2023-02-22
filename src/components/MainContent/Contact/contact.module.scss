@@ -1,7 +1,7 @@
 @import "../../../index.scss";
 
 .contactContainer {
-    height: 100vh;
+    min-height: 100vh;
     @extend .container;
     margin:0 40px;
     display: flex;
@@ -15,7 +15,6 @@ h4 {
 }
 
 .inf {
-    width: 510px;
     p {
         color: #BCBFC7;
         font-family: $Lato;
@@ -32,11 +31,11 @@ h4 {
 
 .contact {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .contactForm {
-    width: 510px;
+    width: 40%;
 }
 
 .list {
@@ -64,7 +63,7 @@ h4 {
         @extend .textfield-title;
     }
     .textfield {
-        width: 90%;
+        min-width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
         background: #1c2849;
@@ -79,7 +78,7 @@ h4 {
         @extend .textfield-title;
     }
     .textarea {
-        width: 90%;
+        min-width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
         background: #1c2849;
@@ -88,5 +87,14 @@ h4 {
         resize: vertical;
         height: 90px;
         outline: none;
+    }
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
