@@ -133,7 +133,8 @@ $sidebar_component_padding: 16px;
         }
     }
     .specification {
-        width: 60%;
+        width: 100%;
+        margin-top: 30px;
         .inf_title {
             font-family: $Raleway;
             font-size: 45px;
@@ -142,6 +143,41 @@ $sidebar_component_padding: 16px;
         }
         p {
             color: #b4b6ba;
+        }
+    }
+}
+
+@media screen and (max-device-width: 1000px) {
+    
+    .projectPage {
+        .mainContent {
+            display: flex;
+            flex-direction: column;
+            .project {
+                width: 99%;
+            }
+            .sidebar {
+                margin-top: 15px;
+                width: 99%;
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 620px) {
+    .project_btn {
+        outline: none;
+        border: none;
+        background: transparent;
+        color: #e6dcdc;
+        font-size: 45px;
+        cursor: pointer;
+        height: 98%;
+        width: 10%;
+        user-select: none;
+        &:hover {
+            color: #FFF;
+            transition: all 0.7s ease;
         }
     }
 }

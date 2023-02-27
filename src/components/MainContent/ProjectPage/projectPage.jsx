@@ -33,6 +33,10 @@ const ProjectPage = (props) => {
                     <div className={classes.dots}>
                         {dots}
                     </div>
+                    <div className={classes.specification}>
+                        <h4 className={classes.inf_title}>Technical specification</h4>
+                        <p>{project.specification}</p>
+                    </div>
                 </div>
                 <div className={classes.sidebar}>
                     <div className={classes.technologies}>
@@ -47,13 +51,9 @@ const ProjectPage = (props) => {
                     </div>
                     <div className={classes.online}>
                         <h4 className={classes.sidebar_title}>Online</h4>
-                        <a  href={project.online}>{project.online}</a>
+                        <a href={project.online}>{project.online}</a>
                     </div>
                 </div>
-            </div>
-            <div className={classes.specification}>
-                <h4 className={classes.inf_title}>Technical specification</h4>
-                <p>{project.specification}</p>
             </div>
         </div>
     )

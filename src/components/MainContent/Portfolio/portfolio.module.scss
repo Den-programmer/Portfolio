@@ -23,5 +23,18 @@
         @extend .container;
         display: flex;
         justify-content: space-between;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-device-width: 1100px) {
+    .portfolio {
+        .portfolioMainContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
