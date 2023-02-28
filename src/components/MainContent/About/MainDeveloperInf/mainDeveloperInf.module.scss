@@ -23,7 +23,7 @@
         .photo {
             width: 25%;
             img {
-                width: 250px;
+                width: 100%;
                 height: 240px;
                 display: block;
             }
@@ -31,3 +31,36 @@
     }
 }
 
+@media screen and (max-device-width: 1000px) {
+    .AboutContainer {
+        @extend .container;
+        .realInformation {
+            background: #202E54;
+            padding: 25px;
+            margin: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .inf {
+                width: 100%;
+                .infTitle {
+                    font-size: 2em;
+                    margin-block-start: 0em;
+                    margin-block-end: 0em;
+                }
+                .infText {
+                    font-size: 1.075em;
+                }
+            }
+            .photo {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}
