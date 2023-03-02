@@ -33,9 +33,21 @@
     perspective: 500px;
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 1000px) {
     .dFlexContainer {
         display: flex;
         flex-direction: column;
+    }
+
+    .Main {
+        background: #121A2E;
+        width: 100%;
+        height: 100%;
+        width: 100%;
+        transform: translateX(0px) translateY(80px);
+    }
+    
+    .MainActive {
+        display: none;
     }
 }

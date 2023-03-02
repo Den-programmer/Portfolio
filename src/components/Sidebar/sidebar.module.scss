@@ -35,7 +35,7 @@
 
 .sidebarSectionContainer {
     width: 80px;
-    height: 80vh;
+    height: 200vh;
 }
 
 .sidebarSection {
@@ -71,28 +71,18 @@
     }
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 1000px) {
     .sidebarContainer {
-        // top: 0;
-        // transform: rotate(90deg);
+        bottom: auto;
+        transform: rotate(-90deg) translate(732px, 732px);
     }
 
     .initial {
-        color: #fff;
-        background-color: #e2786c;
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        font-weight: bold;
-        cursor: pointer;
+        transform: rotate(90deg);
     }
 
     .sidebarSectionContainer {
         width: 80px;
-        min-height: 80vh;
     }
 
     .sidebarSection {
@@ -100,4 +90,19 @@
         height: 100%;
     }
 
+    .ButtonMenu {
+        .hamburger {
+            cursor: pointer;
+            transform: rotate(90deg) translateX(-300px);
+        }
+    }
+}
+
+@media screen and (max-device-width: 576px) {
+    .ButtonMenu {
+        .hamburger {
+            cursor: pointer;
+            transform: rotate(90deg) translateX(-520px);
+        }
+    }
 }

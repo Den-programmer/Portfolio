@@ -14,3 +14,18 @@
         padding-inline-start: 0px;
     }
 }
+
+@media screen and (max-device-width: 1000px) {
+    .nav {
+        margin-left: 0px;
+        margin-top: 80px;
+        width: 100%;    
+        .list { 
+            height: 100%;
+            width: 100%;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            padding-inline-start: 0px;
+        }
+    }
+}
