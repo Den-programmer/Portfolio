@@ -9,11 +9,11 @@ const MainDeveloperInf = (props) => {
                 <div className={classes.inf}>
                     <h2 className={classes.infTitle}>About Denis Grigorov</h2>
                     <p className={classes.infText}>
-                        I've been learned a lot of techonologies since my 13 years,
+                        I've been learned a lot of technologies since my 13 years,
                         In my fifteen years old started to create My Social Network using React.
 
-                        Really ambitious and powerful person, beside learning programming, interested in every kinds of science.
-                        The most active in: learning launguages (English, Czech, Dansk), Math, Politics, History, Geopolitics, ... The culture of
+                        Really ambitious and powerful person, beside learning programming, interested in every kind of science.
+                        The most active in: learning languages (English, Czech, Dansk), Math, Politics, History, Geopolitics, ... The culture of
                         European countries. Really like travelling.
 
                         Nowadays working on projects: My Social Network, Internet Store, My Social Network API. Gradually learn C#, and do some

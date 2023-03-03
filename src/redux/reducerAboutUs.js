@@ -6,9 +6,7 @@ import webpack from '../images/technologies/webpack.png'
 import _jest from '../images/technologies/jest.png'
 import html from '../images/technologies/html5.png'
 import css from '../images/technologies/css3.png'
-import bootstrap from '../images/technologies/bootstrap.png'
 import material_ui from '../images/technologies/material-ui.svg'
-import jquery from '../images/technologies/jQuery.png'
 import sass from '../images/technologies/sass.png'
 import git from '../images/technologies/git.png'
 import npm from '../images/technologies/npm.png'
@@ -63,19 +61,9 @@ const AboutUsState = {
             img: css
         },
         {
-            id: 10,
-            title: "Bootstrap",
-            img: bootstrap 
-        },
-        {
             id: 11,
             title: "Material UI",
             img: material_ui
-        },
-        {
-            id: 12,
-            title: "JQuery",
-            img: jquery 
         },
         {
             id: 13,
