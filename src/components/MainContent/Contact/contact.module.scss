@@ -46,6 +46,11 @@ h4 {
     color: #E2786C;
 }
 
+.listItemMarkedLink {
+    color: #E2786C;
+    text-decoration: none;
+}
+
 .textfield-title {
     font-size: 0.875em;
     font-family: $Raleway;
@@ -87,6 +92,14 @@ h4 {
         resize: vertical;
         height: 90px;
         outline: none;
+    }
+}
+
+.errorMessage {
+    padding: 20px 0px;
+    p {
+        color: red;
+        font-size: 14px;
     }
 }
 
