@@ -18,7 +18,7 @@ const Contact = (props) => {
                     </p>
                     <ul className={classes.list}>
                         <li className={classes.listItem}>Email: <span className={classes.listItemMarked}>denisgrigorov094@gmail.com</span></li>
-                        <li className={classes.listItem}>LinkedIn: <span className={classes.listItemMarked}><a className={classes.listItemMarkedLink} target="_blank" href="https://www.linkedin.com/in/denis-grigorov-047695293/">DenIsEnlightener</a></span></li>
+                        <li className={classes.listItem}>LinkedIn: <span className={classes.listItemMarked}><a className={classes.listItemMarkedLink} target="_blank" href="https://www.linkedin.com/in/denisenligtener2">DenIsEnlightener</a></span></li>
                         <li className={classes.listItem}>Github: <span className={classes.listItemMarked}><a className={classes.listItemMarkedLink} target="_blank" href="https://github.com/Den-programmer">Den-programmer</a></span></li>
                     </ul>
                     <p className={classes.listFoot}>
