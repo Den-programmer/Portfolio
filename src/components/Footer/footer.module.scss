@@ -2,19 +2,21 @@
 
 .mainTitle {
     font-size: 36px;
+    color: $common_replace_Color;
     font-family: $Raleway;
 }
 .subMainText {
     font-size: 14px;
     font-weight: 300;
+    color: $main_text_color;
     font-family: $Lato;
 }
 
 .footer {
-    background: linear-gradient(to right, #23325b, #1c2849);
+    background: linear-gradient($footer_gradient);
     width: 100%;
     height: 300px;
-    color: #fff;
+    color: $main_text_color;
     display: flex;
     align-items: center;
     .footerInfContainer {

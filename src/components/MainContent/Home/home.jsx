@@ -16,7 +16,7 @@ const Home = () => {
                     </h1>
                     <div className={classes.about}>
                         <p>
-                            Specialized in <span style={{ fontWeight: 'bold' }}>frontend development</span> with over 3 years of professional experience in
+                            Specialized in <span className={classes.fr_dv}>frontend development</span> with over 3 years of professional experience in
                             building the web and working with technologies like React
                         </p>
                     </div>

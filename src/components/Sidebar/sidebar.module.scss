@@ -8,13 +8,13 @@
     box-shadow: none;
     display: flex;
     flex-direction: column;
-    background: rgb(32, 46, 84);
+    background: linear-gradient($header_gradient);
     transition: transform 0.25s ease-in-out 0s, box-shadow 0.25s 0s;
 }
 
 .initial {
     color: #fff;
-    background-color: #e2786c;
+    background-color: $common_replace_Color;
     width: 80px;
     height: 80px;
     display: flex;

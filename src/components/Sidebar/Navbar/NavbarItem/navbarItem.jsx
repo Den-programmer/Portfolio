@@ -8,8 +8,8 @@ const NavbarItem = ({ id, path, subLink, title, isChosen, setNavLinkChosenStatus
         <NavLink onClick={() => setNavLinkChosenStatus(id)} style={{ textDecoration: 'none' }} to={path}>
             <li onMouseEnter={() => setStatusHovered(true)} onMouseLeave={() => setStatusHovered(false)} 
             className={isChosen ? classes.listItemActive : classes.listItem}>
-                <a style={hovered ? { color: '#E2786C' } : {  }} className={classes.listLink} to={path}>{title}</a>
-                <p style={hovered ? { color: '#FFF' } : {  }} className={classes.subLink}>{subLink}</p>
+                <a className={hovered ?  classes.hoveredlistLink  : classes.listLink} to={path}>{title}</a>
+                <p className={hovered ? classes.subLink : classes.hoveredsubLink}>{subLink}</p>
             </li>
         </NavLink>
     )

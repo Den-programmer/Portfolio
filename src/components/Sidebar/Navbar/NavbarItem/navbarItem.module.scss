@@ -5,7 +5,7 @@
     height: 25%;
     width: 340px;
     flex: 1 1 0%;
-    background: #212F57;
+    background: linear-gradient($header_gradient);
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
 
     .subLink {
         font-family: $Lato;
-        color: #9BA1B2;
+        color: $main_text_color;
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
@@ -34,7 +34,7 @@
     cursor: pointer;
     width: 340px;
     flex: 1 1 0%;
-    background: #1C2849;
+    background: $common_bgc;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
 
     .listLink {
         text-decoration: none;
-        color: #E2786C;
+        color: $common_replace_Color;
         font-family: $Raleway;
         font-size: 1.4em;
         font-weight: bold;
@@ -58,18 +58,33 @@
     }
 }
 
+.hoveredlistLink {
+    text-decoration: none;
+    color: $common_replace_Color;
+    font-family: $Raleway;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $common_replace_Color;
+}
+.hoveredsubLink {
+    color: #FFF;
+    font-family: $Lato;
+    color: #FFF;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+
 @media screen and (max-device-width: 1000px) {
     .listItem {
         cursor: pointer;
         height: 25%;
         width: 100%;
         flex: 1 1 0%;
-        background: #212F57;
         padding-left: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-bottom: 1px solid #374365;
         transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
 
         .listLink {
@@ -82,7 +97,6 @@
 
         .subLink {
             font-family: $Lato;
-            color: #9BA1B2;
             margin-block-start: 0em;
             margin-block-end: 0em;
         }
@@ -93,7 +107,6 @@
         cursor: pointer;
         width: 100%;
         flex: 1 1 0%;
-        background: #1C2849;
         padding-left: 30px;
         display: flex;
         flex-direction: column;
@@ -103,7 +116,6 @@
 
         .listLink {
             text-decoration: none;
-            color: #E2786C;
             font-family: $Raleway;
             font-size: 1.4em;
             font-weight: bold;

@@ -52,7 +52,7 @@ const ProjectPage = (props) => {
                     <div className={classes.online}>
                         <h4 className={classes.sidebar_title}>Online</h4>
                         <a href={project.online}>{project.online}</a>
-                        {project.id === 1 && <p style={{ color: '#B96866', fontWeight: 300, padding: '10px 0px' }}>For now it doesn't work, because I need a real hosting to place my backend. If you are interested in this project, you need to download it to your computer and load it on your localhost.</p>}
+                {project.id === 1 && <p style={{ color: 'yellow', fontWeight: 600, padding: '10px 0px' }}>For now it doesn't work, because I need a real hosting to place my backend. If you are interested in this project, you need to download it to your computer and load it on your localhost.</p>}
                     </div>
                 </div>
             </div>

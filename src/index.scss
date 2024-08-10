@@ -29,6 +29,17 @@ ul {
   margin-block-end: 1.5em;
 }
 
-// p, h1, h2, h3, h4, h5, h6, div, span {
-//   user-select: #E2786C;
-// }
+// Common colors
+
+$common_replace_Color: #FFD700;
+
+$common_bgc: #005f40;
+$common_bgc2: #3fdda8;
+$bgc_for_prj: #392727;
+
+$main_text_color: #f0f0f0;
+
+$linkBtn_border: 2px solid #FF00FF;
+
+$header_gradient: to right, $common_bgc, $common_bgc2;
+$footer_gradient: to left, $common_bgc, $common_bgc2;

@@ -11,16 +11,24 @@
 .container {
     @extend .container;
     margin: 40px;
+    padding: 40px;
+    background: linear-gradient($header_gradient);
 }
 
 .greetings {
     display: block;
+    color: $common_replace_Color;
     font-size: 40px;
     line-height: 1.4;
 }
 
 .main {
     width: 70%;
+}
+
+.fr_dv {
+    font-weight: bold;  
+    color: $common_replace_Color;
 }
 
 .inf {

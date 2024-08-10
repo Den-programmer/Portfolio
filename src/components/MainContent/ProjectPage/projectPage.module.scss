@@ -1,7 +1,10 @@
 @import '../../../index.scss';
 
-$sidebar_component_bg: #212F57;
+$sidebar_component_bg: linear-gradient(to right, #00f2ff, #1900ff);
 $sidebar_component_padding: 16px;
+$technology_gr: #FFF;
+$technology_text_color: #222;
+// $technology_gr: linear-gradient(to right, $common_bgc2, #00f2ff);
 
 .project_btn {
     outline: none;
@@ -59,7 +62,7 @@ $sidebar_component_padding: 16px;
                     margin: 0px 7px;
                     border-radius: 50%;
                     transition: all 0.3s ease;
-                    background: #24345F;
+                    background: $common_bgc;
                     cursor: pointer;
                 }
                 .activeDot {
@@ -69,7 +72,7 @@ $sidebar_component_padding: 16px;
                     border-radius: 50%;
                     transition: all 0.3s ease;
                     cursor: pointer;
-                    background: #E2786C;
+                    background: $common_replace_Color;
                     scale: 1.4;
                 }
             }
@@ -85,6 +88,7 @@ $sidebar_component_padding: 16px;
                 margin-block-start: 0em;
                 margin-block-end: 0em;
                 font-weight: 300;
+
             }
             div {
                 margin: 10px 0px;
@@ -101,11 +105,12 @@ $sidebar_component_padding: 16px;
                     flex-wrap: wrap;
                 }
                 .technology {
-                    background: #1A2646;
+                    background: $technology_gr;
+                    color: $technology_text_color;
                     padding: 5px;
                     font-size: 14px;
                     width: fit-content;
-                    font-weight: 300;
+                    font-weight: 600;
                     margin-right: 5px;
                     margin-top: 0px;
                     margin-bottom: 5px;
@@ -113,18 +118,28 @@ $sidebar_component_padding: 16px;
             }
             .date {
                 background: $sidebar_component_bg;
+                color: #FFF;
                 padding: $sidebar_component_padding;
                 p {
-                    color: #e6dcdc;
+                    color: $technology_text_color;
+                    font-weight: 600;
+                    display: inline-block;
+                    background: $technology_gr;
+                    padding: 5px;
+                    margin: 5px 0;
                 }
             }
             .online {
+                color: #FFF;
                 background: $sidebar_component_bg;
                 padding: $sidebar_component_padding;
                 a {
+                    background-color: $technology_gr;
                     text-decoration: none;
-                    color: #B96866;
-                    font-weight: 300;
+                    color: $technology_text_color;
+                    display: inline-block;
+                    padding: 5px;
+                    margin: 5px 0;
                     &:hover {
                         text-decoration: underline;
                     }
@@ -142,7 +157,7 @@ $sidebar_component_padding: 16px;
             margin-block-end: 0em;
         }
         p {
-            color: #b4b6ba;
+            color: #FFF;
         }
     }
 }
@@ -169,7 +184,6 @@ $sidebar_component_padding: 16px;
         outline: none;
         border: none;
         background: transparent;
-        color: #e6dcdc;
         font-size: 45px;
         cursor: pointer;
         height: 98%;

@@ -3,7 +3,10 @@
 .contactContainer {
     min-height: 100vh;
     @extend .container;
-    margin:0 40px;
+    background: linear-gradient($header_gradient);
+    margin:40px;
+    padding: 40px;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,12 +19,13 @@ h4 {
 
 .inf {
     p {
-        color: #BCBFC7;
+        color: $main_text_color;
         font-family: $Lato;
     }
 }
 
 .inf__title {
+    color: $common_replace_Color;
     font-size: 2.4em;
     line-height: 1.6;
     font-family: $Lato;
@@ -36,18 +40,21 @@ h4 {
 
 .contactForm {
     width: 40%;
+    h4 {
+        color: $common_replace_Color;
+    }
 }
 
 .list {
-    color: #BCBFC7;
+    color: $main_text_color;
 }
 
 .listItemMarked {
-    color: #E2786C;
+    color: $common_replace_Color;
 }
 
 .listItemMarkedLink {
-    color: #E2786C;
+    color: $common_replace_Color;
     text-decoration: none;
 }
 
@@ -71,7 +78,7 @@ h4 {
         min-width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
-        background: #1c2849;
+        background: $common_bgc;
         -webkit-text-fill-color: #b3b7c2;
         caret-color: #b3b7c2;
         outline: none;
@@ -86,7 +93,7 @@ h4 {
         min-width: 90%;
         padding: 12px;
         border: 2px solid #555e77;
-        background: #1c2849;
+        background: $common_bgc;
         -webkit-text-fill-color: #b3b7c2;
         caret-color: #b3b7c2;
         resize: vertical;

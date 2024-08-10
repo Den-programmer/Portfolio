@@ -4,7 +4,7 @@ import Project from './Project/project'
 
 const Portfolio = ({ projects, navigation, setCurrentProjectId, setHeaderTitle, setHeaderInf }) => {
     const navItems = navigation.map(item => {
-        return <li style={item.isActive ? { background: '#E2786C' } : { background: '#202E53' }} key={item.id} className={classes.navItem}>{item.name}</li>
+        return <li style={item.isActive ? { background: 'yellow', color: '#392727', fontWeight: 'bold' } : { background: '#222', color: '#FFF', fontWeight: 'bold' }} key={item.id} className={classes.navItem}>{item.name}</li>
     })
     const Projects = projects.map(project => {
         return <Project setHeaderTitle={setHeaderTitle} 

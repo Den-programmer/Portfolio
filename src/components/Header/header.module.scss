@@ -6,7 +6,8 @@
     height: 200px;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, #23325b, #1c2849);
+    color: $common_replace_Color;
+    background: linear-gradient($header_gradient);
     .headerInfContainer {
         @extend .container;
         h2 {
