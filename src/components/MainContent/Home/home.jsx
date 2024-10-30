@@ -11,8 +11,8 @@ const Home = () => {
                     <span className={classes.greetings}>Hey there,</span>
                     <h1 className={classes.inf}>
                         my name is Denis Grigorov. <br />
-                        I am Full Stack Web Developer based in
-                        Svendborg, Denmark
+                        I am Full Stack Web Developer and <br />
+                        I'm providing development services
                     </h1>
                     <div className={classes.about}>
                         <p>

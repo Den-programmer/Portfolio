@@ -35,7 +35,8 @@ h4 {
 
 .contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
 }
 
 .contactForm {
@@ -47,6 +48,7 @@ h4 {
 
 .list {
     color: $main_text_color;
+    list-style: none;
 }
 
 .listItemMarked {

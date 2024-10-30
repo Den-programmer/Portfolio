@@ -1,9 +1,14 @@
 @import '../../../../index.scss';
 
+$gradient_first: blue;
+$gradient_second: $common_bgc2;
+
+$aboutMeInformation_gradient_backgroundColor: to bottom, $gradient_first, $gradient_second;
+
 .AboutContainer {
     @extend .container;
     .realInformation {
-        background: $common_bgc;
+        background: linear-gradient($aboutMeInformation_gradient_backgroundColor);
         padding: 25px;
         margin: 45px;
         display: flex;
@@ -36,7 +41,7 @@
     .AboutContainer {
         @extend .container;
         .realInformation {
-            background: $common_bgc;
+            background: linear-gradient($aboutMeInformation_gradient_backgroundColor);
             padding: 25px;
             margin: 45px;
             display: flex;

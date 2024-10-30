@@ -1,33 +1,27 @@
 @import '../../../index.scss';
 
-
 .navPanel__btn {
-    line-height: 1.2;
-    background: transparent;
-    position: relative;
-    white-space: nowrap;
-    z-index: 1;
-    border: $linkBtn_border;
-    padding: 22px 35px;
-    color: $main_text_color;
-    transition: color 0.3s ease 0s, background 0.3s ease 0s, border 0.3s ease 0s;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #FF5733; 
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.25rem;
-    display: inline-block;
-    text-decoration: none !important;
-    font-family: $Raleway;
-    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-
-@media only screen and (max-device-width: 768px) {
-    .navPanel__btn {
-        padding: 12px 25px;
-    }
+.navPanel__btn:hover {
+    background-color: #E04E2E; 
+    transform: scale(1.1); 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2)
 }
 
-@media only screen and  (max-device-width: 576px) {
+@media (max-width: 480px) {
     .navPanel__btn {
-        padding: 12px 25px;
+        padding: 12px 24px;
+        font-size: 16px;
     }
 }
