@@ -5,17 +5,62 @@
     height: 25%;
     width: 340px;
     flex: 1 1 0%;
-    background: linear-gradient($header_gradient);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.05) 0%, rgba(26, 58, 82, 0.3) 100%);
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid #374365;
-    transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    border-left: 4px solid transparent;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     .listLink {
         text-decoration: none;
-        color: #FFF;
+        color: $main_text_color;
+        font-family: $Raleway;
+        font-size: 1.4em;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    .subLink {
+        font-family: $Lato;
+        color: $text_secondary;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        transition: all 0.2s ease;
+    }
+
+    &:hover {
+        border-left-color: $cyan_primary;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.1) 0%, rgba(26, 58, 82, 0.5) 100%);
+        
+        .listLink {
+            color: $cyan_primary;
+        }
+        .subLink {
+            color: $main_text_color;
+        }
+    }
+}
+
+.listItemActive {
+    height: 25%;
+    cursor: pointer;
+    width: 340px;
+    flex: 1 1 0%;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.15) 0%, rgba(26, 58, 82, 0.6) 100%);
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    border-left: 4px solid $cyan_primary;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    .listLink {
+        text-decoration: none;
+        color: $cyan_primary;
         font-family: $Raleway;
         font-size: 1.4em;
         font-weight: bold;
@@ -29,51 +74,20 @@
     }
 }
 
-.listItemActive {
-    height: 25%;
-    cursor: pointer;
-    width: 340px;
-    flex: 1 1 0%;
-    background: $common_bgc;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid #374365;
-    transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
-
-    .listLink {
-        text-decoration: none;
-        color: $common_replace_Color;
-        font-family: $Raleway;
-        font-size: 1.4em;
-        font-weight: bold;
-    }
-
-    .subLink {
-        font-family: $Lato;
-        color: #FFF;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-    }
-}
-
 .hoveredlistLink {
     text-decoration: none;
-    color: $common_replace_Color;
+    color: $cyan_primary;
     font-family: $Raleway;
     font-size: 1.4em;
     font-weight: bold;
-    color: $common_replace_Color;
 }
+
 .hoveredsubLink {
-    color: #FFF;
+    color: $main_text_color;
     font-family: $Lato;
-    color: #FFF;
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
-
 
 @media screen and (max-device-width: 1000px) {
     .listItem {
@@ -85,11 +99,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        border-left: none;
+        border-top: 4px solid transparent;
         transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.05) 0%, rgba(26, 58, 82, 0.3) 100%);
 
         .listLink {
             text-decoration: none;
-            color: #FFF;
+            color: $main_text_color;
             font-family: $Raleway;
             font-size: 1.4em;
             font-weight: bold;
@@ -97,8 +115,20 @@
 
         .subLink {
             font-family: $Lato;
+            color: $text_secondary;
             margin-block-start: 0em;
             margin-block-end: 0em;
+        }
+
+        &:hover {
+            border-top-color: $cyan_primary;
+            
+            .listLink {
+                color: $cyan_primary;
+            }
+            .subLink {
+                color: $main_text_color;
+            }
         }
     }
 
@@ -111,11 +141,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-bottom: 1px solid #374365;
+        border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        border-left: none;
+        border-top: 4px solid $cyan_primary;
         transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.15) 0%, rgba(26, 58, 82, 0.6) 100%);
 
         .listLink {
             text-decoration: none;
+            color: $cyan_primary;
             font-family: $Raleway;
             font-size: 1.4em;
             font-weight: bold;
@@ -123,7 +157,7 @@
 
         .subLink {
             font-family: $Lato;
-            color: #FFF;
+            color: $main_text_color;
             margin-block-start: 0em;
             margin-block-end: 0em;
         }

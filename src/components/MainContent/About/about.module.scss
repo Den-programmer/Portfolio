@@ -1,10 +1,24 @@
 @import '../../../index.scss';
 
 .about {
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.8) 0%, rgba(15, 36, 56, 0.8) 100%);
+    min-height: calc(100vh - 100px);
+    padding: 40px 0;
+    
     h2, h3 {
         color: $main_text_color;
         font-family: $Raleway;
+        background: linear-gradient(135deg, $cyan_light, $teal_accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
+    
+    h2 {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    
     h3 {
         font-size: 1.7em;
     }

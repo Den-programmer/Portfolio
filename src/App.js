@@ -3,7 +3,7 @@ import Header from './components/Header/headerContainer'
 import MainPage from './components/MainContent/mainContentContainer'
 import Sidebar from './components/Sidebar/sidebarContainer'
 import Footer from './components/Footer/footerContainer'
-import { Route, Switch } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Home from './components/MainContent/Home/home'
 import About from './components/MainContent/About/about'
@@ -12,57 +12,59 @@ import Contact from './components/MainContent/Contact/contact'
 import Portfolio from './components/MainContent/Portfolio/portfolioContainer'
 import ProjectPage from './components/MainContent/ProjectPage/projectPageContainer'
 
+// Layout component for common structure
+const LayoutWithHeader = ({ children, isSidebarOpen }) => (
+  <div className="dFlexContainer">
+    <Sidebar />
+    <div className={isSidebarOpen ? "MainActive" : "Main"}>
+      <Header />
+      <MainPage>
+        {children}
+      </MainPage>
+      <Footer />
+    </div>
+  </div>
+)
+
+const LayoutWithoutHeader = ({ children, isSidebarOpen }) => (
+  <div className="dFlexContainer">
+    <Sidebar />
+    <div className={isSidebarOpen ? "MainActive" : "Main"}>
+      <MainPage>
+        {children}
+      </MainPage>
+    </div>
+  </div>
+)
+
 const App = (props) => {
+  const { isSidebarOpen } = props
+
   return (
     <div className="App">
-      <Switch>
-        <Route path={'/Portfolio/project/' + props.currentProjectId} render={() => <div className="dFlexContainer">
-          <Sidebar />
-          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
-            <Header />
-            <MainPage>
-              <ProjectPage />
-            </MainPage>
-            <Footer />
-          </div>
-        </div>} />
-        <Route path='/Portfolio' render={() => <div className="dFlexContainer">
-          <Sidebar />
-          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
-            <Header />
-            <MainPage>
-              <Portfolio />
-            </MainPage>
-            <Footer />
-          </div>
-        </div>} />
-        <Route path='/About' render={() => <div className="dFlexContainer">
-          <Sidebar />
-          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
-            <MainPage>
-              <About />
-            </MainPage>
-            <Footer />
-          </div>
-        </div>} />
-        <Route path='/Contact' render={() => <div className="dFlexContainer">
-          <Sidebar />
-          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
-            <MainPage>
-              <Contact />
-            </MainPage>
-          </div>
-        </div>} />
-        <Route path='/' render={() => <div className="dFlexContainer">
-          <Sidebar />
-          <div className={props.isSidebarOpen ? "MainActive" : "Main"}>
-            <MainPage>
-              <Home />
-            </MainPage>
-          </div>
-        </div>} />
-        <Route path='*' render={() => <ErrorPage />} />
-      </Switch>
+      <Routes>
+        <Route
+          path="/Portfolio/project/:projectId"
+          element={<LayoutWithHeader isSidebarOpen={isSidebarOpen}><ProjectPage /></LayoutWithHeader>}
+        />
+        <Route
+          path="/Portfolio"
+          element={<LayoutWithHeader isSidebarOpen={isSidebarOpen}><Portfolio /></LayoutWithHeader>}
+        />
+        <Route
+          path="/About"
+          element={<LayoutWithoutHeader isSidebarOpen={isSidebarOpen}><About /></LayoutWithoutHeader>}
+        />
+        <Route
+          path="/Contact"
+          element={<LayoutWithoutHeader isSidebarOpen={isSidebarOpen}><Contact /></LayoutWithoutHeader>}
+        />
+        <Route
+          path="/"
+          element={<LayoutWithoutHeader isSidebarOpen={isSidebarOpen}><Home /></LayoutWithoutHeader>}
+        />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </div>
   )
 }

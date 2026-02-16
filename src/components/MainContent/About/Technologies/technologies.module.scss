@@ -2,27 +2,54 @@
 
 .technologiesContainer {
     @extend .container;
+    padding: 40px 0;
+    
     .technologies {
         margin: 45px;
-        padding: 25px;
+        padding: 40px;
         margin-bottom: 145px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(179, 102, 255, 0.05) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 16px;
+        
         .resources {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            gap: 24px;
+            
             .source {
                 display: flex;
                 align-items: center;
-                margin: 10px 5px;
-                .sourceImage {
-                    width: 24px;
-                    height: 24px;
+                padding: 12px 16px;
+                background: rgba(0, 212, 255, 0.08);
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(0, 212, 255, 0.15);
+                    border-color: $cyan_primary;
+                    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
                 }
+                
+                .sourceImage {
+                    width: 28px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                    filter: brightness(1.2);
+                }
+                
                 .sourceTitle {
                     font-family: $Lato;
-                    font-weight: 300;
+                    font-weight: 500;
                     font-size: 1rem;
-                    margin:0 10px;
+                    color: $main_text_color;
+                    margin: 0;
                 }
             }
         }

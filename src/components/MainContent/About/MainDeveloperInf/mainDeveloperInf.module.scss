@@ -1,37 +1,58 @@
 @import '../../../../index.scss';
 
-$gradient_first: blue;
-$gradient_second: $common_bgc2;
-
-$aboutMeInformation_gradient_backgroundColor: to bottom, $gradient_first, $gradient_second;
-
 .AboutContainer {
     @extend .container;
+    padding: 40px 0;
+    
     .realInformation {
-        background: linear-gradient($aboutMeInformation_gradient_backgroundColor);
-        padding: 25px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(179, 102, 255, 0.05) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 16px;
+        padding: 40px;
         margin: 45px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 40px;
+        
         .inf {
-            width: 73%;
+            flex: 1;
+            
             .infTitle {
-                font-size: 2em;
+                font-size: 2.2em;
                 margin-block-start: 0em;
-                margin-block-end: 0em;
-                color: $common_replace_Color;
+                margin-block-end: 16px;
+                background: linear-gradient(135deg, $cyan_light, $teal_accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 700;
             }
+            
             .infText {
                 font-size: 1.075em;
+                color: $main_text_color;
+                line-height: 1.8;
             }
         }
+        
         .photo {
-            width: 25%;
+            flex: 0 0 280px;
+            
             img {
                 width: 100%;
-                height: 240px;
+                height: 280px;
                 display: block;
+                border-radius: 12px;
+                border: 2px solid rgba(0, 212, 255, 0.3);
+                object-fit: cover;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    border-color: $cyan_primary;
+                    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+                }
             }
         }
     }
@@ -40,27 +61,39 @@ $aboutMeInformation_gradient_backgroundColor: to bottom, $gradient_first, $gradi
 @media screen and (max-device-width: 1000px) {
     .AboutContainer {
         @extend .container;
+        
         .realInformation {
-            background: linear-gradient($aboutMeInformation_gradient_backgroundColor);
-            padding: 25px;
-            margin: 45px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(179, 102, 255, 0.05) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 30px;
+            
             .inf {
                 width: 100%;
+                text-align: center;
+                
                 .infTitle {
                     font-size: 2em;
                     margin-block-start: 0em;
-                    margin-block-end: 0em;
+                    margin-block-end: 16px;
                 }
+                
                 .infText {
                     font-size: 1.075em;
                 }
             }
+            
             .photo {
                 width: 100%;
+                max-width: 300px;
+                
                 img {
                     width: 100%;
                     height: auto;

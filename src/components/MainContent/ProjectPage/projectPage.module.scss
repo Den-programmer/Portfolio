@@ -1,179 +1,259 @@
 @import '../../../index.scss';
 
-$sidebar_component_bg: linear-gradient(to right, #00f2ff, #1900ff);
+$sidebar_component_bg: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(179, 102, 255, 0.15));
 $sidebar_component_padding: 16px;
-$technology_gr: #FFF;
-$technology_text_color: #222;
-// $technology_gr: linear-gradient(to right, $common_bgc2, #00f2ff);
+$technology_gr: $cyan_primary;
+$technology_text_color: #000;
 
 .project_btn {
     outline: none;
     border: none;
     background: transparent;
-    color: #e6dcdc;
+    color: rgba($main_text_color, 0.6);
     font-size: 75px;
     cursor: pointer;
     height: 98%;
     width: 10%;
     user-select: none;
+    transition: all 0.3s ease;
+    
     &:hover {
-        color: #FFF;
-        transition: all 0.7s ease;
+        color: $cyan_primary;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
     }
 }
 
 .projectPage {
     @extend .container;
+    padding: 40px 0;
+    
     .mainContent {
         display: flex;
         align-items: start;
         justify-content: space-between;
-        padding-top: 80px;
+        padding-top: 40px;
         padding-bottom: 20px;
+        gap: 40px;
+        
         .project {
-            width: 60%;
+            flex: 1;
+            
             .projectDisplay {
                 position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 2px solid rgba(0, 212, 255, 0.2);
+                
                 .project_btn_prev {
                     position: absolute;
+                    left: 0;
                     @extend .project_btn;
+                    z-index: 10;
+                    
                     &:hover {
-                        box-shadow:inset 40px 0px 40px 0px #222;
+                        box-shadow: inset 40px 0px 40px 0px rgba(0, 0, 0, 0.3);
                     }
                 }
+                
                 .project_btn_next {
                     right: 0px;
                     position: absolute;
                     @extend .project_btn;
+                    z-index: 10;
+                    
                     &:hover {
-                        box-shadow:inset -40px 0px 40px 0px #222;
+                        box-shadow: inset -40px 0px 40px 0px rgba(0, 0, 0, 0.3);
                     }
                 }
+                
                 .project_image {
                     width: 100%;
+                    display: block;
                 }
             }
+            
             .dots {
                 display: flex;
                 justify-content: center;
+                gap: 8px;
+                margin-top: 20px;
+                
                 .dot {
-                    width: 13px;
-                    height: 13px;
-                    margin: 0px 7px;
+                    width: 12px;
+                    height: 12px;
                     border-radius: 50%;
                     transition: all 0.3s ease;
-                    background: $common_bgc;
+                    background: rgba($cyan_primary, 0.3);
                     cursor: pointer;
+                    border: 1px solid rgba($cyan_primary, 0.5);
+                    
+                    &:hover {
+                        background: rgba($cyan_primary, 0.6);
+                    }
                 }
+                
                 .activeDot {
-                    width: 13px;
-                    height: 13px;
-                    margin: 0px 7px;
+                    width: 12px;
+                    height: 12px;
                     border-radius: 50%;
                     transition: all 0.3s ease;
                     cursor: pointer;
-                    background: $common_replace_Color;
-                    scale: 1.4;
+                    background: $cyan_primary;
+                    scale: 1.3;
+                    border: 1px solid $cyan_primary;
+                    box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
                 }
             }
         }
+        
         .sidebar {
-            width: 35%;
+            flex: 0 0 350px;
+            
             .sidebar_title {
                 margin-block-start: 0em;
                 margin-block-end: 0em;
                 font-family: $Raleway;
+                font-size: 28px;
+                color: $cyan_primary;
+                font-weight: 700;
             }
+            
             p {
                 margin-block-start: 0em;
                 margin-block-end: 0em;
                 font-weight: 300;
-
+                color: $main_text_color;
             }
+            
             div {
-                margin: 10px 0px;
+                margin: 20px 0px;
             }
+            
             h4 {
-                font-size: 23.5px;
+                font-size: 20px;
+                color: $main_text_color;
+                font-weight: 600;
+                margin-bottom: 10px;
             }
+            
             .technologies {
                 background: $sidebar_component_bg;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(0, 212, 255, 0.2);
                 padding: $sidebar_component_padding;
                 margin-top: 0px;
+                border-radius: 8px;
+                
                 .technologies_content {
                     display: flex;
                     flex-wrap: wrap;
+                    gap: 10px;
                 }
+                
                 .technology {
-                    background: $technology_gr;
-                    color: $technology_text_color;
-                    padding: 5px;
-                    font-size: 14px;
-                    width: fit-content;
+                    background: linear-gradient(135deg, $cyan_primary, $teal_accent);
+                    color: #000;
+                    padding: 8px 14px;
+                    font-size: 13px;
+                    border-radius: 6px;
                     font-weight: 600;
-                    margin-right: 5px;
-                    margin-top: 0px;
-                    margin-bottom: 5px;
+                    transition: all 0.2s ease;
+                    
+                    &:hover {
+                        box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+                        transform: translateY(-2px);
+                    }
                 }
             }
+            
             .date {
                 background: $sidebar_component_bg;
-                color: #FFF;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(0, 212, 255, 0.2);
+                color: $main_text_color;
                 padding: $sidebar_component_padding;
+                border-radius: 8px;
+                
                 p {
-                    color: $technology_text_color;
+                    color: $cyan_primary;
                     font-weight: 600;
                     display: inline-block;
-                    background: $technology_gr;
-                    padding: 5px;
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
+                    padding: 8px 12px;
                     margin: 5px 0;
+                    border: 1px solid rgba(0, 212, 255, 0.3);
+                    border-radius: 4px;
                 }
             }
+            
             .online {
-                color: #FFF;
+                color: $main_text_color;
                 background: $sidebar_component_bg;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(0, 212, 255, 0.2);
                 padding: $sidebar_component_padding;
+                border-radius: 8px;
+                
                 a {
-                    background-color: $technology_gr;
+                    background: linear-gradient(135deg, $cyan_primary, $teal_accent);
                     text-decoration: none;
-                    color: $technology_text_color;
+                    color: #000;
                     display: inline-block;
-                    padding: 5px;
-                    margin: 5px 0;
+                    padding: 8px 14px;
+                    margin: 8px 0;
+                    border-radius: 6px;
+                    font-weight: 600;
+                    transition: all 0.2s ease;
+                    
                     &:hover {
-                        text-decoration: underline;
+                        box-shadow: 0 6px 16px rgba(0, 212, 255, 0.4);
+                        transform: translateY(-2px);
+                        text-decoration: none;
                     }
                 }
             }
         }
     }
+    
     .specification {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 40px;
+        
         .inf_title {
             font-family: $Raleway;
-            font-size: 45px;
+            font-size: 42px;
             margin-block-start: 0em;
-            margin-block-end: 0em;
+            margin-block-end: 20px;
+            background: linear-gradient(135deg, $cyan_light, $teal_accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
         }
+        
         p {
-            color: #FFF;
+            color: $main_text_color;
+            line-height: 1.8;
+            font-size: 16px;
         }
     }
 }
 
 @media screen and (max-device-width: 1000px) {
-    
     .projectPage {
         .mainContent {
             display: flex;
             flex-direction: column;
+            gap: 30px;
+            
             .project {
-                width: 99%;
+                width: 100%;
             }
+            
             .sidebar {
-                margin-top: 15px;
-                width: 99%;
+                width: 100%;
+                flex: 1;
             }
         }
     }
@@ -189,8 +269,9 @@ $technology_text_color: #222;
         height: 98%;
         width: 10%;
         user-select: none;
+        
         &:hover {
-            color: #FFF;
+            color: $cyan_primary;
             transition: all 0.7s ease;
         }
     }

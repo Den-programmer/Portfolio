@@ -16,30 +16,33 @@ const Portfolio = {
         {
             id: 1,
             title: 'Social Network',
-            text: 'The app to communicate with people',
+            text: 'A modern social platform for connecting with friends',
             images: [SocialNetwork1, SocialNetwork2, SocialNetwork3],
             date: 'March 2020',
-            technologies: ['React', 'Redux', 'TypeScript', 'NodeJS', 'Express', 'MongoDB', 'HTML5', 'CSS3', 'Sass', 'MaterialUI'],
+            category: 'social-network',
+            technologies: ['React', 'Redux', 'TypeScript', 'Node.js', 'MongoDB'],
             online: 'https://den-programmer.github.io/SocialNet/',
             specification: 'The Social Network App is used to communicate with people, find new friends, sharing photos and videos, listening to the favourite music and so on.'
         },
         {
             id: 2,
             title: 'TodoList',
-            text: 'The app to keep your notes',
+            text: 'A to-do list web app to manage your daily tasks',
             images: [Todolist1, Todolist2, Todolist3],
             date: 'April 2020',
-            technologies: ['React', 'Redux', 'JavaScript', 'Firebase', 'HTML5', 'CSS3'],
+            category: 'todo-list',
+            technologies: ['Vue.js', 'Node.js', 'Express.js'],
             online: 'https://den-programmer.github.io/TodoList/',
             specification: 'Cool app for keep your tasks comfortably. Comfortable interface, menu. There\'s  detailed instraction on the page about. The app uses firebase to store data, so that, we have simple app with minimalistic design.'
         },
         {
             id: 3,
             title: 'Internet Store',
-            text: 'Buy new things with our internet store',
+            text: 'A futuristic e-commerce platform for buying new products online',
             images: [InternetStore1, InternetStore4, InternetStore2, InternetStore3],
             date: 'September 2020',
-            technologies: ['React', 'Redux', 'React-Slick', 'JavaScript', 'HTML5', 'CSS3', 'Sass'],
+            category: 'e-commerce',
+            technologies: ['React', 'Redux', 'Node.js'],
             online: 'https://den-programmer.github.io/Internet-store/',
             specification: 'The Internet Store is created to help user buy him the things he need at affordable prices.'
         }
@@ -50,6 +53,16 @@ const Portfolio = {
             id: 1,
             name: 'All',
             isActive: true
+        },
+        {
+            id: 2,
+            name: 'Web Apps',
+            isActive: false
+        },
+        {
+            id: 3,
+            name: 'E-Commerce',
+            isActive: false
         }
     ]
 }

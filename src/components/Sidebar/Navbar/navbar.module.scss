@@ -6,6 +6,10 @@
     user-select: none;
     height: 99.5vh;
     position: fixed;
+    background: linear-gradient(180deg, rgba(10, 25, 41, 0.95) 0%, rgba(15, 36, 56, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(0, 212, 255, 0.2);
+    
     .list { 
         height: 100%;
         width: 100%;
@@ -18,7 +22,13 @@
 @media screen and (max-device-width: 1000px) {
     .nav {
         margin-left: 0px;
-        width: 100%;    
+        width: 100%;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        
         .list { 
             height: 100%;
             width: 100%;

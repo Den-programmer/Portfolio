@@ -3,23 +3,36 @@
 
 .header {
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     display: flex;
     align-items: center;
-    color: $common_replace_Color;
+    color: $cyan_primary;
     background: linear-gradient($header_gradient);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    
     .headerInfContainer {
         @extend .container;
+        padding: 40px 0;
+        
         h2 {
             @extend .mainTitle;
             line-height: 1.2;
+            font-size: 48px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, $cyan_light, $teal_accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        
         p {
             @extend .subMainText;
-            line-height: 1.2;
+            line-height: 1.6;
             font-size: 18px;
             margin-block-start: 0em;
             margin-block-end: 0em;
+            color: $main_text_color;
         }
     }
 }
