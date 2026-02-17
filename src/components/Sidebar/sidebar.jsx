@@ -9,7 +9,7 @@ const Sidebar = ({ sidebarWidth, isSidebarOpen, setSidebarIsOpenStatus, navigati
         <>
             <div style={{ width: sidebarWidth + 'px' }} className={classes.sidebarContainer}>
                 <div className={classes.sidebar}>
-                    <div className={classes.initial}>
+                    <div onClick={() => setSidebarIsOpenStatus(!isSidebarOpen)} className={classes.initial}>
                         D
                     </div>
                     <div className={classes.sidebarSectionContainer}>
@@ -28,7 +28,7 @@ const Sidebar = ({ sidebarWidth, isSidebarOpen, setSidebarIsOpenStatus, navigati
                     </div>
                 </div>
             </div>
-            {isSidebarOpen && <Navbar setNavLinkChosenStatus={setNavLinkChosenStatus} navigationLinks={navigationLinks} />}
+            {isSidebarOpen && <Navbar setSidebarIsOpenStatus={setSidebarIsOpenStatus} setNavLinkChosenStatus={setNavLinkChosenStatus} navigationLinks={navigationLinks} />}
         </>
     )
 }

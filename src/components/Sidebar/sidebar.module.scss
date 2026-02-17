@@ -15,10 +15,12 @@
     backdrop-filter: blur(10px);
     transition: transform 0.25s ease-in-out, box-shadow 0.25s;
     border-right: 1px solid rgba(0, 212, 255, 0.2);
+    z-index: 999;
 }
 
 .initial {
     color: #000;
+    user-select: none;
     background: linear-gradient(135deg, $cyan_primary, $teal_accent);
     width: 80px;
     height: 80px;
@@ -33,7 +35,7 @@
     left: 0;
     box-shadow: 0 8px 16px rgba(0, 212, 255, 0.3);
     transition: all 0.3s ease;
-
+    z-index: 100000;
     &:hover {
         box-shadow: 0 12px 24px rgba(0, 212, 255, 0.4);
         transform: scale(1.05);
@@ -114,17 +116,17 @@
     padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .sidebarContainer {
         position: fixed;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 0;
         width: 100%;
         height: 80px;
         flex-direction: row;
         justify-content: flex-start;
         padding: 0;
+        z-index: 1001;
         background: linear-gradient($header_gradient);
         backdrop-filter: blur(10px);
         border-right: none;
@@ -134,9 +136,11 @@
     .initial {
         width: 80px;
         height: 80px;
-        position: static;
+        position: absolute;
         margin-right: auto;
         border-radius: 0;
+        font-size: clamp(30px, 8vw, 50px);
+        z-index: 1002;
     }
 
     .sidebarSectionContainer {
@@ -149,10 +153,30 @@
     .ButtonMenu {
         .hamburger {
             transform: none;
+            
+            .bar {
+                width: clamp(24px, 6vw, 30px);
+            }
         }
     }
 
     .socials {
         display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sidebarContainer {
+        height: 70px;
+    }
+
+    .initial {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .sidebarSectionContainer {
+        margin-right: 10px;
     }
 }

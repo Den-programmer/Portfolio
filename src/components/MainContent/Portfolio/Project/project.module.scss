@@ -2,6 +2,7 @@
 
 .project {
     width: 30%;
+    min-width: 250px;
     line-height: 0.8em;
     text-decoration: none;
     color: $main_text_color;
@@ -59,7 +60,7 @@
         .title {
             margin-block-start: 0.5em;
             margin-block-end: 0.5em;
-            font-size: 24px;
+            font-size: clamp(18px, 4vw, 24px);
             font-weight: 600;
             color: #fff;
             letter-spacing: -0.5px;
@@ -68,7 +69,7 @@
         .text {
             line-height: normal;
             color: $text_secondary;
-            font-size: 14px;
+            font-size: clamp(12px, 3vw, 14px);
             margin-block-end: 1em;
             flex: 1;
         }
@@ -82,11 +83,11 @@
 
             .tech {
                 display: inline-block;
-                padding: 6px 12px;
+                padding: clamp(5px, 1vw, 6px) clamp(10px, 2vw, 12px);
                 background: rgba(0, 212, 255, 0.1);
                 border: 1px solid rgba(0, 212, 255, 0.3);
                 border-radius: 20px;
-                font-size: 12px;
+                font-size: clamp(10px, 2.5vw, 12px);
                 color: $cyan_primary;
                 font-weight: 500;
                 transition: all 0.2s ease;
@@ -100,13 +101,13 @@
 
         .viewBtn {
             display: inline-block;
-            padding: 10px 24px;
+            padding: clamp(8px, 1.5vw, 10px) clamp(16px, 3vw, 24px);
             background: linear-gradient(135deg, $cyan_primary 0%, $teal_accent 100%);
             color: #000;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: clamp(12px, 2.5vw, 14px);
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -120,22 +121,44 @@
     }
 }
 
-@media screen and (max-device-width: 1100px) {
+@media screen and (max-width: 1200px) {
     .project {
-        width: 80%;
-        cursor: pointer;
-        margin-bottom: 50px;
+        width: 45%;
+        min-width: 200px;
+    }
+}
 
-        .text {
-            line-height: normal;
+@media screen and (max-width: 1024px) {
+    .project {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .projectImage {
+            height: 200px;
         }
     }
 }
 
-@media screen and (max-device-width: 576px) {
+@media screen and (max-width: 768px) {
+    .project {
+        .projectContent {
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
     .project {
         width: 100%;
         
+        .projectImage {
+            height: 180px;
+        }
+        
+        .projectContent {
+            padding: 16px;
+        }
+
         .title {
             line-height: normal;
         }

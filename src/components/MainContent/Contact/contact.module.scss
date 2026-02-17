@@ -44,7 +44,7 @@ h4 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.8em;
+    font-size: clamp(2em, 6vw, 2.8em);
     line-height: 1.2;
     font-family: $Raleway;
     margin-block-start: 0em;
@@ -62,11 +62,12 @@ h4 {
 
 .contact__section {
     max-width: 600px;
+    width: 100%;
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(179, 102, 255, 0.05) 100%);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 212, 255, 0.2);
     border-radius: 16px;
-    padding: 40px;
+    padding: clamp(25px, 5vw, 40px);
 }
 
 .contactForm {
@@ -136,8 +137,9 @@ h4 {
     }
     
     .textfield {
-        min-width: 90%;
-        padding: 12px;
+        width: 100%;
+        min-width: auto;
+        padding: clamp(10px, 2vw, 12px);
         border: 2px solid rgba(0, 212, 255, 0.3);
         background: rgba(10, 25, 41, 0.6);
         color: $main_text_color;
@@ -145,6 +147,8 @@ h4 {
         outline: none;
         border-radius: 6px;
         transition: all 0.2s ease;
+        font-size: clamp(12px, 3vw, 1em);
+        box-sizing: border-box;
         
         &:focus {
             border-color: $cyan_primary;
@@ -166,18 +170,21 @@ h4 {
     }
     
     .textarea {
-        min-width: 90%;
-        padding: 12px;
+        width: 100%;
+        min-width: auto;
+        padding: clamp(10px, 2vw, 12px);
         border: 2px solid rgba(0, 212, 255, 0.3);
         background: rgba(10, 25, 41, 0.6);
         color: $main_text_color;
         caret-color: $cyan_primary;
         resize: vertical;
-        height: 120px;
+        height: clamp(100px, 20vh, 180px);
         outline: none;
         border-radius: 6px;
         transition: all 0.2s ease;
         font-family: $Lato;
+        font-size: clamp(12px, 3vw, 1em);
+        box-sizing: border-box;
         
         &:focus {
             border-color: $cyan_primary;
@@ -201,7 +208,7 @@ h4 {
     }
 }
 
-@media only screen and (max-device-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .contact {
         display: flex;
         flex-direction: column;
@@ -209,10 +216,86 @@ h4 {
     }
     
     .contactContainer {
-        padding: 40px;
+        padding: 40px 20px;
+        margin: 40px 0;
         
         &::before {
             display: none;
+        }
+    }
+    
+    .inf__title {
+        font-size: clamp(1.8em, 5vw, 2.4em);
+        margin-block-end: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactContainer {
+        padding: 30px 15px;
+        margin: 20px 0;
+        
+        .inf {
+            p {
+                font-size: clamp(13px, 3vw, 15px);
+            }
+        }
+    }
+    
+    .contact__section {
+        padding: clamp(20px, 4vw, 30px);
+    }
+    
+    .contactForm {
+        h4 {
+            font-size: clamp(1rem, 3vw, 1.2em);
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contactContainer {
+        padding: 20px 10px;
+        margin: 15px 0;
+        
+        &::before {
+            display: none;
+        }
+    }
+    
+    .inf__title {
+        font-size: clamp(1.4em, 4vw, 1.8em);
+        margin-block-end: 15px;
+    }
+    
+    .contact {
+        flex-direction: column;
+    }
+    
+    .contact__section {
+        max-width: 100%;
+        padding: clamp(15px, 3vw, 25px);
+    }
+    
+    .contactForm {
+        width: 100%;
+        
+        h4 {
+            font-size: clamp(0.9em, 2.5vw, 1em);
+            margin-bottom: 12px;
+        }
+    }
+    
+    .textfield-title {
+        font-size: clamp(0.8em, 2.5vw, 0.875em);
+    }
+    
+    .errorMessage {
+        padding: 15px 0px;
+        
+        p {
+            font-size: clamp(12px, 2.5vw, 14px);
         }
     }
 }

@@ -31,7 +31,7 @@ const Portfolio = {
             images: [Todolist1, Todolist2, Todolist3],
             date: 'April 2020',
             category: 'todo-list',
-            technologies: ['Vue.js', 'Node.js', 'Express.js'],
+            technologies: ['React', 'Redux', 'Firebase'],
             online: 'https://den-programmer.github.io/TodoList/',
             specification: 'Cool app for keep your tasks comfortably. Comfortable interface, menu. There\'s  detailed instraction on the page about. The app uses firebase to store data, so that, we have simple app with minimalistic design.'
         },

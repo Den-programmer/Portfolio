@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .mainTitle {
-    font-size: 36px;
+    font-size: clamp(28px, 7vw, 36px);
     background: linear-gradient(135deg, $cyan_light, $teal_accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -11,7 +11,7 @@
 }
 
 .subMainText {
-    font-size: 14px;
+    font-size: clamp(12px, 3vw, 14px);
     font-weight: 300;
     color: $main_text_color;
     font-family: $Lato;
@@ -20,7 +20,8 @@
 .footer {
     background: linear-gradient($footer_gradient);
     width: 100%;
-    min-height: 300px;
+    min-height: auto;
+    padding: 40px 0;
     color: $main_text_color;
     display: flex;
     align-items: center;
@@ -38,14 +39,14 @@
             
             h2 {
                 @extend .mainTitle;
-                font-size: 42px;
+                font-size: clamp(24px, 6vw, 42px);
                 margin-bottom: 16px;
             }
             
             p {
                 @extend .subMainText;
                 line-height: 1.6;
-                font-size: 16px;
+                font-size: clamp(13px, 3vw, 16px);
             }
         }
         
@@ -58,14 +59,75 @@
     }
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-width: 1024px) {
     .footer {
         .footerInfContainer {
             flex-direction: column;
             text-align: center;
+            gap: 30px;
             
             .textWrapper {
                 width: 100%;
+                
+                h2 {
+                    font-size: clamp(22px, 5vw, 36px);
+                }
+            }
+            
+            .navigationPanel {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 0;
+        
+        .footerInfContainer {
+            gap: 20px;
+            
+            .textWrapper {
+                h2 {
+                    font-size: clamp(20px, 4.5vw, 30px);
+                    margin-bottom: 12px;
+                }
+                
+                p {
+                    font-size: clamp(12px, 2.5vw, 14px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 20px 0;
+        
+        .footerInfContainer {
+            gap: 15px;
+            
+            .textWrapper {
+                h2 {
+                    font-size: clamp(18px, 4vw, 24px);
+                    margin-bottom: 10px;
+                }
+                
+                p {
+                    font-size: clamp(11px, 2.5vw, 12px);
+                }
+            }
+            
+            .navigationPanel {
+                flex-direction: column;
+                gap: 10px;
+                
+                > * {
+                    width: 100%;
+                }
             }
         }
     }

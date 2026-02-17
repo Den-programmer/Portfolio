@@ -15,11 +15,47 @@
     }
     
     h2 {
-        font-size: 42px;
+        font-size: clamp(32px, 8vw, 42px);
         margin-bottom: 30px;
     }
     
     h3 {
-        font-size: 1.7em;
+        font-size: clamp(1.3em, 4vw, 1.7em);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        padding: 30px 0;
+        
+        h2 {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 20px 0;
+        
+        h2 {
+            font-size: clamp(28px, 6vw, 36px);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about {
+        padding: 15px 0;
+        
+        h2 {
+            font-size: clamp(24px, 5vw, 30px);
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            font-size: clamp(1.1em, 3.5vw, 1.4em);
+        }
     }
 }

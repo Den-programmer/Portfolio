@@ -2,7 +2,7 @@
 
 .portfolio {
     @extend .container;
-    padding: 40px 0;
+    padding: 40px 20px;
     
     .nav {
         margin-bottom: 50px;
@@ -16,7 +16,7 @@
             
             .navItem {
                 display: inline-block;
-                padding: 12px 28px;
+                padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 28px);
                 border: 2px solid transparent;
                 color: $main_text_color;
                 cursor: pointer;
@@ -24,7 +24,7 @@
                 background: rgba(0, 212, 255, 0.05);
                 border-radius: 25px;
                 font-weight: 600;
-                font-size: 14px;
+                font-size: clamp(12px, 2.5vw, 14px);
                 letter-spacing: 0.5px;
                 position: relative;
                 overflow: hidden;
@@ -75,18 +75,58 @@
     }
 }
 
-@media screen and (max-device-width: 1100px) {
+@media screen and (max-width: 1200px) {
+    .portfolio {
+        .portfolioMainContent {
+            gap: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
     .portfolio {
         .portfolioMainContent {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
         }
         
         .nav .navList {
             justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        padding: 30px 15px;
+        
+        .nav {
+            margin-bottom: 40px;
+        }
+        
+        .portfolioMainContent {
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .portfolio {
+        padding: 20px 10px;
+        
+        .nav {
+            margin-bottom: 30px;
+            
+            .navList {
+                gap: 10px;
+            }
+        }
+        
+        .portfolioMainContent {
+            gap: 15px;
         }
     }
 }

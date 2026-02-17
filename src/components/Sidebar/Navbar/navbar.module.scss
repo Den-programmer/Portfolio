@@ -4,13 +4,15 @@
     transition: all 0.2s ease-out 0s, opacity 0.2s 0s;
     margin-left: 80px;
     user-select: none;
-    height: 99.5vh;
+    height: calc(100vh);
     position: fixed;
     background: linear-gradient(180deg, rgba(10, 25, 41, 0.95) 0%, rgba(15, 36, 56, 0.95) 100%);
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(0, 212, 255, 0.2);
-    
-    .list { 
+
+    z-index: 9999;
+
+    .list {
         height: 100%;
         width: 100%;
         margin-block-start: 0em;
@@ -19,22 +21,30 @@
     }
 }
 
-@media screen and (max-device-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .nav {
         margin-left: 0px;
         width: 100%;
-        height: calc(100vh - 80px);
-        margin-top: 80px;
         position: fixed;
-        top: 80px;
         left: 0;
-        
-        .list { 
+        overflow-y: auto;
+
+        .list {
             height: 100%;
             width: 100%;
             margin-block-start: 0em;
             margin-block-end: 0em;
             padding-inline-start: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav {
+        .list {
+            flex-direction: column;
         }
     }
 }
