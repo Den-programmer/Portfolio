@@ -5,7 +5,8 @@ import { setHeaderTitle, setHeaderInf } from "../../../redux/reducerApp"
 
 const mapStateToProps = (state) => ({
     projects: state.portfolio.projects,
-    navigation: state.portfolio.navigation
+    navigation: state.portfolio.navigation,
+    isSidebarOpen: state.sidebar.isSidebarOpen
 })
 
 const PortfolioContainer = connect(mapStateToProps, { setCurrentProjectId, setHeaderTitle, setHeaderInf })(Portfolio)
